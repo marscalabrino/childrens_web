@@ -47,6 +47,18 @@ body {
 .inicio .slideImagenesIndex {
 	height: 80vh;
 	margin-top: 2rem;
+	animation-duration: 2s;
+	animation-name: aparece;
+	animation-iteration-count: infinite;
+}
+
+@keyframes aparece {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 
@@ -152,7 +164,6 @@ body {
  	flex-flow: wrap;
  }
 }
-
 
 
 
@@ -310,6 +321,11 @@ body {
  .contactoRedesLogos {
  	height: 2rem;
  }
+
+ .contactoRedesLogos:hover {
+ 	height: 2.5rem;
+ }
+ 
 
  .contactoFormulario {
  	/*display: flex;
