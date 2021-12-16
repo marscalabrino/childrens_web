@@ -1,0 +1,400 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* tengo problema con la imagen de la barandilla*/
+/*solucion momentanea*/
+body {
+	overflow-x: hidden;
+}
+
+
+/* --- MENU --- */
+
+.header {
+	background-color:#fff;
+	position: fixed;
+	width: 100vw;
+	z-index: 1000;
+	.menu {
+		height: 2rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-right: 1.5rem;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		div {
+			margin-right: 1rem;
+			margin-left: 1rem;
+		}
+	}
+}
+
+ 
+/* CONTENIDO PRINCIPAL INDEX */
+
+.inicio{
+	height: 85vh;
+	.slideImagenesIndex {
+		height: 80vh;
+		margin-top: 2rem;
+	}
+	@media all and (max-width: 624px) { /* CELULARES */
+		height: 90vh;
+	}
+
+}
+
+
+/* FOOTER INDEX LOGO Y BARANDA() */
+#footerIndex {
+	display: grid;
+	grid-template-columns: min-content auto;
+	.logoContainer { /* LOGO FOOTER */
+		height: 10rem;
+		display: flex; /*PARA PODER ALINEAR A LA BASE*/
+		grid-row: 1 / span 2;
+		align-self: end;
+		.logoFraccion {	 /* LOGO FOOTER */
+			align-self: self-end;
+			z-index: 1;
+			height: 45vw;
+			min-height: 35rem;
+			object-fit: contain; /**/
+		}
+	}
+	@media all and (max-width: 624px) { /* CELULARES */
+		display: inline-block;
+		width: 100vw;
+		.logoContainer {
+			display: none;
+		}
+	}
+}
+
+.barandilla{
+	height: 15vh;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	.barandillaImagen{
+		height: 18vh;
+		align-self: self-end;
+		position: absolute;
+		min-height: 80px;
+	}
+	@media all and (max-width: 624px) { /* CELULARES */
+		height: 10vh !important;
+		.barandillaLogo {
+			position: absolute;
+			width: 90vw;
+			align-self: end;
+			height: 50vh !important;
+			object-fit: contain;
+			min-height: 150px;
+		}
+		.barandillaImagen {
+				object-fit: contain;
+				z-index: 1;
+			}
+	}
+}
+
+
+/* INFO CONTACTO Y MAPA (FUTURO GOOGLEMAPS)*/
+
+.contactIndex{
+	display: flex;
+	height: 10rem;
+	div {
+		flex-grow:1;
+	}
+	.contacto {
+		padding: 2rem;
+		p {
+			padding: 0.2rem;
+		}
+	}
+	.mapIframe {
+	scale: 70%;
+	}	
+	@media all and (max-width: 624px) { /* CELULARES */
+		.contactIndex {
+ 			flex-direction: column;
+ 			height: auto;
+ 			flex-flow: wrap;
+ 		}
+	}
+}
+
+/* -- ACTIVIDADES MOBILE FIRST -480PX -- */
+
+.actividades { /**/
+	display: grid;
+	grid-template-columns: auto auto;
+	padding-bottom: 6vh;
+	padding-top: 7vh;
+	height: 94vh;
+	grid-template-rows: 1fr 1fr 1fr;
+	.actividadesIlustracionesGrid {/*Suplantar por ilustraciones*/
+		height: 7vh;
+		background-color: grey;
+		border-radius: 2rem;
+		margin: 2rem;
+	}
+	.actividadesTitulos {
+		height: auto;
+	}
+	.actividadesLogoDesktop {
+		display: none;
+		overflow-y: hidden;
+		/*transform: translateY(60px);*/
+		img {
+			width: 30vw;
+			padding-top: 15vh;
+		}
+	}
+	@media all and (min-width: 480px) { /*TABLET*/
+		/*display: grid;
+		grid-template-columns: auto auto auto;
+		padding-top: 10vh;*/
+		padding-bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		div {
+			flex: 30vw;
+		}
+	}
+	@media all and (min-width: 769px) { /*DESKTOP*/
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		/*padding-top: 3vh;*/
+		margin-right: 7rem;
+		margin-left: 7rem;
+		.actividadesLogoDesktop {
+			display: inline !important; 
+			grid-column: 2 / span 2;
+			grid-row: 2 / span 2;
+		}
+	}
+		
+}
+
+
+.actividadesContenido {
+	background-image: url('../images/fondo01.PNG');
+	background-size: 100vw;
+	background-position: center;
+	height: 840px;
+	position: relative;
+
+}
+
+
+/* NOTICIAS HTML  MOBILE FIRST */
+
+.noticiasHeader {
+	position: relative;
+}
+
+.noticiasLogoContenedor {
+	height: 3rem;
+	.noticiasLogo {
+		display: none;
+		position: relative;
+		z-index: 1;
+		width: 160px;
+		margin-left: 1.5rem;
+		margin-top: -1rem;
+	}
+	@media all and (min-width: 480px) { /*desktop y tablet*/
+		height: 6rem;
+		.noticiasLogo {
+			display: initial;
+ 		}
+	}
+}
+
+.noticiasContenido {
+	background-image: url('../images/fondo01.PNG');
+	background-size: 100vw;
+	background-position: center;
+	height: 1600px;
+	position: relative;
+	padding-right: 10vw;
+	padding-left: 10vw;
+	padding-top: 3rem;
+	white-space: pre-line;
+	.noticiasTitulo {
+		font-family: 'Montserrat';
+		font-size: 2rem;
+		text-align: center;
+	}
+	.noticiasArticuloContenido{
+		font-size:1.2rem;
+		font-family: 'Montserrat';
+ 	}
+}
+
+
+/* CONTACTO HTML MOBILE FIRST */
+
+.contactoBody {
+		@media all and (min-width: 480px) { /*desktop y tablet*/
+			display: grid;
+			grid-template-columns: 5fr 6fr;
+			height: 94vh;
+		}
+}
+
+.contactoRedes {
+	padding: 8rem 4rem 0 4rem;
+	display: flex;
+	height: 5rem;
+	div {
+ 		flex-grow: 1;
+ 		font-size: .6rem;
+ 	}
+ 	.contactoRedesLogos {
+ 		height: 2rem;
+ 		&:hover {
+ 			height: 2.5rem;
+ 		}
+ 	}
+ 	@media all and (min-width: 480px) { /*desktop y tablet*/
+ 		grid-column: 2 ;
+		grid-row: 1 ;
+		padding: 8rem 12vw 0 12vw;
+ 	}
+}
+
+.contactoFormularioContenedor {
+		@media all and (min-width: 480px) { /*desktop y tablet*/
+			grid-column: 1 ;
+			grid-row: 1 / span 3;
+			background-image: url('../images/logo.PNG');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position-x: center;
+			background-position-y: bottom;
+			height: 94vh;
+			z-index: 10001;
+		}
+		@media all and (max-height: 650px) {
+			background-image: none;
+		}
+
+}
+
+.contactoFormulario {
+ 	/*display: flex;
+ 	flex-direction: column;*/
+ 	padding-right: 9vw;
+ 	padding-left: 9vw;
+ 	padding-top: 5rem;
+ 	height: 400px;
+ 	justify-content: space-between;
+ 	div {
+		padding-top: 0.2rem;
+	}
+	.contactoMensaje {
+		height: 7rem;
+		width: -moz-available;/*no funciona en chrome*/
+	}
+	.contactoFormularioRazones {
+		align-self: end;
+	}
+	.contactoFormularioBotones {
+		display: flex;
+		justify-content: center;
+	}
+	.contactoMapIframe {
+		scale: 70%;
+	}
+	@media all and (min-width: 480px) { /*desktop y tablet*/
+		/*padding: auto !important;
+		height: auto;*/
+		padding-top: 37vh;
+		padding-right: 12vw;
+		padding-left: 12vw;
+	}
+	@media all and (max-height: 650px) {
+		padding-top: auto;
+		padding-right: 10vw;
+		padding-left: 10vw;
+	}
+}
+
+.contactoContacto {
+	@media all and (min-width: 480px) { /*desktop y tablet*/
+		grid-column: 2;
+		grid-row: 3 ;
+		.contactoMapa {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		.contactoMapIframe {
+			scale: 100vh;
+		}
+	}
+}
+
+/* INSTALACIONES  MOBILE FIRST */
+
+.instalacionesSalasLista {
+	list-style: none;
+	padding: 3rem;
+	li {
+	padding: .3rem;
+	
+	}
+}
+
+.instalacionesLogoContenedor {
+	height: 0.5rem !important;
+}
+
+.instalacionesImgContainer {
+	height: 90vh;
+}
+
+ /* general estilo BEM */
+
+.fontMontserrat {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 0.8rem;
+	color: black;
+}
+
+
+.center {
+	align-self: center;
+	text-align: center;
+	align-items: center;
+}
+
+.alignRight {
+	text-align: right;
+	align-self: end;
+
+}
+
+.redfooter{ /* FOOTER ROJO */
+	background-color: rgb(255, 0, 43);
+	height: 7vh;
+	position: relative;
+}
+
+
+
+
+
+
+
+
