@@ -10,11 +10,10 @@ body {
 	overflow-x: hidden;
 }
 
-
-/* --- MENU --- */
+/* --- MENU en todos los html--- */
 
 .header {
-	background-color:#fff;
+	background-color: map-get($bgColors, white);
 	position: fixed;
 	width: 100vw;
 	z-index: 1000;
@@ -88,9 +87,13 @@ body {
 		position: absolute;
 		min-height: 80px;
 	}
+	.barandillaLogo {
+		display: none;
+	}
 	@media all and (max-width: 624px) { /* CELULARES */
 		height: 10vh !important;
 		.barandillaLogo {
+			display: block;
 			position: absolute;
 			width: 90vw;
 			align-self: end;
@@ -118,10 +121,11 @@ body {
 		padding: 2rem;
 		p {
 			padding: 0.2rem;
+			margin-bottom: 0;//boostrap lo agranda
 		}
 	}
 	.mapIframe {
-	scale: 70%;
+			scale: 70%;
 	}	
 	@media all and (max-width: 624px) { /* CELULARES */
 		.contactIndex {
@@ -143,7 +147,7 @@ body {
 	grid-template-rows: 1fr 1fr 1fr;
 	.actividadesIlustracionesGrid {/*Suplantar por ilustraciones*/
 		height: 7vh;
-		background-color: grey;
+		background-color: #808080;
 		border-radius: 2rem;
 		margin: 2rem;
 	}
@@ -187,12 +191,7 @@ body {
 
 
 .actividadesContenido {
-	background-image: url('../images/fondo01.PNG');
-	background-size: 100vw;
-	background-position: center;
-	height: 840px;
-	position: relative;
-
+	@include bookBackgound (840px);
 }
 
 
@@ -221,23 +220,19 @@ body {
 }
 
 .noticiasContenido {
-	background-image: url('../images/fondo01.PNG');
-	background-size: 100vw;
-	background-position: center;
-	height: 1600px;
-	position: relative;
+	@include bookBackgound (1600px);
 	padding-right: 10vw;
 	padding-left: 10vw;
 	padding-top: 3rem;
 	white-space: pre-line;
 	.noticiasTitulo {
-		font-family: 'Montserrat';
-		font-size: 2rem;
+		@extend .fontMontserrat;
+		font-size: 1.5rem;
 		text-align: center;
 	}
 	.noticiasArticuloContenido{
-		font-size:1.2rem;
-		font-family: 'Montserrat';
+		@extend .fontMontserrat;
+		font-size:1rem;
  	}
 }
 
@@ -364,15 +359,6 @@ body {
 }
 
  /* general estilo BEM */
-
-.fontMontserrat {
-	font-family: 'Montserrat';
-	font-weight: 700;
-	font-size: 0.8rem;
-	color: black;
-}
-
-
 .center {
 	align-self: center;
 	text-align: center;
@@ -386,7 +372,7 @@ body {
 }
 
 .redfooter{ /* FOOTER ROJO */
-	background-color: rgb(255, 0, 43);
+	background-color: $footers;
 	height: 7vh;
 	position: relative;
 }
