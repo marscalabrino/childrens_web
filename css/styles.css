@@ -1,7 +1,7 @@
 /* COLORS */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 /* line 3, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_fonts.scss */
-.fontMontserrat, .noticiasContenido .noticiasTitulo, .noticiasContenido .noticiasArticuloContenido {
+.fontMontserrat, .noticiasContenido .noticiasTitulo, .actividadesContenido .noticiasTitulo, .noticiasContenido .noticiasArticuloContenido, .actividadesContenido .noticiasArticuloContenido {
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 0.8rem;
@@ -9,7 +9,7 @@
 }
 
 /* line 8, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_fonts.scss */
-.fontMontserrat .bold, .noticiasContenido .noticiasTitulo .bold, .noticiasContenido .noticiasArticuloContenido .bold {
+.fontMontserrat .bold, .noticiasContenido .noticiasTitulo .bold, .actividadesContenido .noticiasTitulo .bold, .noticiasContenido .noticiasArticuloContenido .bold, .actividadesContenido .noticiasArticuloContenido .bold {
   font-weight: 700;
 }
 
@@ -77,14 +77,44 @@ body {
   }
 }
 
-/* FOOTER INDEX LOGO Y BARANDA() */
-/* line 54, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 52, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#carouselInicioDesktop .carousel-item img {
+  height: 85vh;
+  width: auto !important;
+  margin: auto;
+}
+
+@media all and (max-width: 624px) {
+  /* line 51, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  #carouselInicioDesktop {
+    /* CELULARES */
+    display: none;
+  }
+}
+
+/* line 63, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#carouselInicioMobile .carousel-item img {
+  height: 85vh;
+  width: auto !important;
+  margin: auto;
+}
+
+@media all and (min-width: 624px) {
+  /* line 62, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  #carouselInicioMobile {
+    /* CELULARES */
+    display: none;
+  }
+}
+
+/* FOOTER INDEX LOGO - BARANDA Y CONTACTO */
+/* line 77, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 #footerIndex {
   display: grid;
   grid-template-columns: min-content auto;
 }
 
-/* line 57, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 80, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 #footerIndex .logoContainer {
   /* LOGO FOOTER */
   height: 10rem;
@@ -94,7 +124,7 @@ body {
   align-self: end;
 }
 
-/* line 62, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 85, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 #footerIndex .logoContainer .logoFraccion {
   /* LOGO FOOTER */
   align-self: self-end;
@@ -106,19 +136,54 @@ body {
 }
 
 @media all and (max-width: 624px) {
-  /* line 54, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 77, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   #footerIndex {
     /* CELULARES */
     display: inline-block;
     width: 100vw;
   }
-  /* line 73, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 96, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   #footerIndex .logoContainer {
     display: none;
   }
 }
 
-/* line 79, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 100, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#footerIndex .contactIndex {
+  display: flex;
+  height: 12rem;
+  margin: auto;
+}
+
+/* line 104, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#footerIndex .contactIndex div {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* line 109, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#footerIndex .contactIndex .contacto p {
+  padding: 0.2rem;
+  margin-bottom: 0;
+}
+
+/* line 114, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+#footerIndex .contactIndex .mapIframe {
+  width: 200px;
+}
+
+@media all and (max-width: 624px) {
+  /* line 100, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  #footerIndex .contactIndex {
+    /* CELULARES */
+    display: block;
+    flex-direction: column;
+    height: auto;
+    flex-flow: wrap;
+  }
+}
+
+/* line 126, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .barandilla {
   height: 15vh;
   display: flex;
@@ -126,7 +191,7 @@ body {
   justify-content: center;
 }
 
-/* line 84, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 131, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .barandilla .barandillaImagen {
   height: 18vh;
   align-self: self-end;
@@ -134,18 +199,18 @@ body {
   min-height: 80px;
 }
 
-/* line 90, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 137, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .barandilla .barandillaLogo {
   display: none;
 }
 
 @media all and (max-width: 624px) {
-  /* line 79, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 126, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .barandilla {
     /* CELULARES */
     height: 10vh !important;
   }
-  /* line 95, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 142, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .barandilla .barandillaLogo {
     display: block;
     position: absolute;
@@ -155,56 +220,15 @@ body {
     object-fit: contain;
     min-height: 150px;
   }
-  /* line 104, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 151, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .barandilla .barandillaImagen {
     object-fit: contain;
     z-index: 1;
   }
 }
 
-/* INFO CONTACTO Y MAPA (FUTURO GOOGLEMAPS)*/
-/* line 114, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactIndex {
-  display: flex;
-  height: 10rem;
-}
-
-/* line 117, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactIndex div {
-  flex-grow: 1;
-}
-
-/* line 120, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactIndex .contacto {
-  padding: 2rem;
-}
-
-/* line 122, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactIndex .contacto p {
-  padding: 0.2rem;
-  margin-bottom: 0;
-}
-
-/* line 127, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactIndex .mapIframe {
-  scale: 70%;
-}
-
-@media all and (max-width: 624px) {
-  /* line 114, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactIndex {
-    /* CELULARES */
-  }
-  /* line 131, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactIndex .contactIndex {
-    flex-direction: column;
-    height: auto;
-    flex-flow: wrap;
-  }
-}
-
 /* -- ACTIVIDADES MOBILE FIRST -480PX -- */
-/* line 141, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 160, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades {
   /**/
   display: grid;
@@ -215,35 +239,38 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* line 148, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 167, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades .actividadesIlustracionesGrid {
   /*Suplantar por ilustraciones*/
   height: 7vh;
-  background-color: #808080;
-  border-radius: 2rem;
   margin: 2rem;
 }
 
-/* line 154, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 170, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.actividades .actividadesIlustracionesGrid i {
+  font-size: 4rem;
+}
+
+/* line 174, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades .actividadesTitulos {
   height: auto;
 }
 
-/* line 157, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 177, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades .actividadesLogoDesktop {
   display: none;
   overflow-y: hidden;
   /*transform: translateY(60px);*/
 }
 
-/* line 161, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 181, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades .actividadesLogoDesktop img {
   width: 30vw;
   padding-top: 15vh;
 }
 
 @media all and (min-width: 480px) {
-  /* line 141, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 160, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .actividades {
     /*TABLET*/
     /*display: grid;
@@ -253,14 +280,14 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  /* line 173, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 193, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .actividades div {
     flex: 30vw;
   }
 }
 
 @media all and (min-width: 769px) {
-  /* line 141, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 160, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .actividades {
     /*DESKTOP*/
     display: grid;
@@ -269,7 +296,7 @@ body {
     margin-right: 7rem;
     margin-left: 7rem;
   }
-  /* line 183, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 203, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .actividades .actividadesLogoDesktop {
     display: inline !important;
     grid-column: 2 / span 2;
@@ -277,27 +304,23 @@ body {
   }
 }
 
-/* line 193, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 212, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividadesContenido {
-  background-image: url("../images/fondo01.PNG");
-  background-size: 100vw;
-  background-position: center;
-  height: 840px;
-  position: relative;
+  height: 800px !important;
 }
 
 /* NOTICIAS HTML  MOBILE FIRST */
-/* line 200, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 219, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .noticiasHeader {
   position: relative;
 }
 
-/* line 204, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 223, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .noticiasLogoContenedor {
   height: 3rem;
 }
 
-/* line 206, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 225, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .noticiasLogoContenedor .noticiasLogo {
   display: none;
   position: relative;
@@ -308,19 +331,19 @@ body {
 }
 
 @media all and (min-width: 480px) {
-  /* line 204, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 223, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .noticiasLogoContenedor {
     /*desktop y tablet*/
     height: 6rem;
   }
-  /* line 216, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 235, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .noticiasLogoContenedor .noticiasLogo {
     display: initial;
   }
 }
 
-/* line 222, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.noticiasContenido {
+/* line 241, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.noticiasContenido, .actividadesContenido {
   background-image: url("../images/fondo01.PNG");
   background-size: 100vw;
   background-position: center;
@@ -328,24 +351,34 @@ body {
   position: relative;
   padding-right: 10vw;
   padding-left: 10vw;
-  padding-top: 3rem;
   white-space: pre-line;
 }
 
-/* line 228, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.noticiasContenido .noticiasTitulo {
+/* line 246, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.noticiasContenido .noticiasTitulo, .actividadesContenido .noticiasTitulo {
   font-size: 1.5rem;
   text-align: center;
 }
 
-/* line 233, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.noticiasContenido .noticiasArticuloContenido {
+/* line 251, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.noticiasContenido .noticiasArticuloContenido, .actividadesContenido .noticiasArticuloContenido {
   font-size: 1rem;
+}
+
+/* line 255, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.noticiasContenido .imgNoticias, .actividadesContenido .imgNoticias {
+  display: flex;
+}
+
+/* line 257, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.noticiasContenido .imgNoticias img, .actividadesContenido .imgNoticias img {
+  height: 200px;
+  margin: auto;
 }
 
 /* CONTACTO HTML MOBILE FIRST */
 @media all and (min-width: 480px) {
-  /* line 242, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 267, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoBody {
     /*desktop y tablet*/
     display: grid;
@@ -354,31 +387,31 @@ body {
   }
 }
 
-/* line 250, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 275, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes {
   padding: 8rem 4rem 0 4rem;
   display: flex;
   height: 5rem;
 }
 
-/* line 254, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 279, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes div {
   flex-grow: 1;
   font-size: .6rem;
 }
 
-/* line 258, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 283, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes .contactoRedesLogos {
   height: 2rem;
 }
 
-/* line 260, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 285, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes .contactoRedesLogos:hover {
   height: 2.5rem;
 }
 
 @media all and (min-width: 480px) {
-  /* line 250, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 275, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoRedes {
     /*desktop y tablet*/
     grid-column: 2;
@@ -388,7 +421,7 @@ body {
 }
 
 @media all and (min-width: 480px) {
-  /* line 271, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 296, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoFormularioContenedor {
     /*desktop y tablet*/
     grid-column: 1;
@@ -404,13 +437,13 @@ body {
 }
 
 @media all and (max-height: 650px) {
-  /* line 271, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 296, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoFormularioContenedor {
     background-image: none;
   }
 }
 
-/* line 289, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario {
   /*display: flex;
  	flex-direction: column;*/
@@ -421,36 +454,36 @@ body {
   justify-content: space-between;
 }
 
-/* line 297, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 322, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario div {
   padding-top: 0.2rem;
 }
 
-/* line 300, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 325, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoMensaje {
   height: 7rem;
   width: -moz-available;
   /*no funciona en chrome*/
 }
 
-/* line 304, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 329, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoFormularioRazones {
   align-self: end;
 }
 
-/* line 307, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 332, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoFormularioBotones {
   display: flex;
   justify-content: center;
 }
 
-/* line 311, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 336, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoMapIframe {
   scale: 70%;
 }
 
 @media all and (min-width: 480px) {
-  /* line 289, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoFormulario {
     /*desktop y tablet*/
     /*padding: auto !important;
@@ -462,7 +495,7 @@ body {
 }
 
 @media all and (max-height: 650px) {
-  /* line 289, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoFormulario {
     padding-top: auto;
     padding-right: 10vw;
@@ -471,60 +504,61 @@ body {
 }
 
 @media all and (min-width: 480px) {
-  /* line 328, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 353, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoContacto {
     /*desktop y tablet*/
     grid-column: 2;
     grid-row: 3;
   }
-  /* line 332, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 357, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoContacto .contactoMapa {
     grid-column: 2;
     grid-row: 2;
   }
-  /* line 336, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 361, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoContacto .contactoMapIframe {
     scale: 100vh;
   }
 }
 
 /* INSTALACIONES  MOBILE FIRST */
-/* line 344, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 369, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesSalasLista {
   list-style: none;
   padding: 3rem;
+  font-size: 1.2rem;
 }
 
-/* line 347, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 373, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesSalasLista li {
   padding: .3rem;
 }
 
-/* line 353, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 379, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesLogoContenedor {
   height: 0.5rem !important;
 }
 
-/* line 357, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 383, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesImgContainer {
   height: 90vh;
 }
 
 /* general estilo BEM */
-/* line 362, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 388, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .center {
   align-self: center;
   text-align: center;
   align-items: center;
 }
 
-/* line 368, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 394, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .alignRight {
   text-align: right;
   align-self: end;
 }
 
-/* line 374, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 400, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .redfooter {
   /* FOOTER ROJO */
   background-color: red;

@@ -46,11 +46,34 @@ body {
 	@media all and (max-width: 624px) { /* CELULARES */
 		height: 90vh;
 	}
+}
 
+#carouselInicioDesktop {
+	.carousel-item img {
+		height: 85vh;
+		width: auto !important;
+		margin: auto;
+	}
+	@media all and (max-width: 624px) { /* CELULARES */
+		display: none;
+	}
+}
+
+#carouselInicioMobile {
+	.carousel-item img {
+		height: 85vh;
+		width: auto !important;
+		margin: auto;
+	}
+	@media all and (min-width: 624px) { /* CELULARES */
+		display: none;
+	}
 }
 
 
-/* FOOTER INDEX LOGO Y BARANDA() */
+
+
+/* FOOTER INDEX LOGO - BARANDA Y CONTACTO */
 #footerIndex {
 	display: grid;
 	grid-template-columns: min-content auto;
@@ -72,6 +95,30 @@ body {
 		width: 100vw;
 		.logoContainer {
 			display: none;
+		}
+	}
+	.contactIndex{
+		display: flex;
+		height: 12rem;
+		margin: auto;
+		div {
+			flex-grow:1;
+			padding: 2rem;
+		}
+		.contacto {
+			p {
+				padding: 0.2rem;
+				margin-bottom: 0;//boostrap lo agranda
+			}
+		}
+		.mapIframe {
+			width: 200px;
+		}	
+		@media all and (max-width: 624px) { /* CELULARES */
+				 display: block;
+				 flex-direction: column;
+				 height: auto;
+				 flex-flow: wrap;
 		}
 	}
 }
@@ -108,34 +155,6 @@ body {
 	}
 }
 
-
-/* INFO CONTACTO Y MAPA (FUTURO GOOGLEMAPS)*/
-
-.contactIndex{
-	display: flex;
-	height: 10rem;
-	div {
-		flex-grow:1;
-	}
-	.contacto {
-		padding: 2rem;
-		p {
-			padding: 0.2rem;
-			margin-bottom: 0;//boostrap lo agranda
-		}
-	}
-	.mapIframe {
-			scale: 70%;
-	}	
-	@media all and (max-width: 624px) { /* CELULARES */
-		.contactIndex {
- 			flex-direction: column;
- 			height: auto;
- 			flex-flow: wrap;
- 		}
-	}
-}
-
 /* -- ACTIVIDADES MOBILE FIRST -480PX -- */
 
 .actividades { /**/
@@ -147,9 +166,10 @@ body {
 	grid-template-rows: 1fr 1fr 1fr;
 	.actividadesIlustracionesGrid {/*Suplantar por ilustraciones*/
 		height: 7vh;
-		background-color: #808080;
-		border-radius: 2rem;
 		margin: 2rem;
+		i {
+			font-size: 4rem;
+		}
 	}
 	.actividadesTitulos {
 		height: auto;
@@ -160,7 +180,7 @@ body {
 		/*transform: translateY(60px);*/
 		img {
 			width: 30vw;
-			padding-top: 15vh;
+			padding-top: 23vh;
 		}
 	}
 	@media all and (min-width: 480px) { /*TABLET*/
@@ -189,11 +209,10 @@ body {
 		
 }
 
-
 .actividadesContenido {
-	@include bookBackgound (840px);
+	@extend .noticiasContenido;
+	height: 800px !important;
 }
-
 
 /* NOTICIAS HTML  MOBILE FIRST */
 
@@ -223,7 +242,6 @@ body {
 	@include bookBackgound (1600px);
 	padding-right: 10vw;
 	padding-left: 10vw;
-	padding-top: 3rem;
 	white-space: pre-line;
 	.noticiasTitulo {
 		@extend .fontMontserrat;
@@ -234,6 +252,13 @@ body {
 		@extend .fontMontserrat;
 		font-size:1rem;
  	}
+	.imgNoticias {
+		display: flex;
+		img {
+			height: 200px;
+			margin: auto;
+		}
+	}
 }
 
 
@@ -344,6 +369,7 @@ body {
 .instalacionesSalasLista {
 	list-style: none;
 	padding: 3rem;
+	font-size: 1.2rem;
 	li {
 	padding: .3rem;
 	
