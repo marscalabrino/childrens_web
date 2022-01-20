@@ -266,7 +266,7 @@ body {
 /* line 181, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .actividades .actividadesLogoDesktop img {
   width: 30vw;
-  padding-top: 15vh;
+  padding-top: 23vh;
 }
 
 @media all and (min-width: 480px) {
@@ -377,188 +377,154 @@ body {
 }
 
 /* CONTACTO HTML MOBILE FIRST */
-@media all and (min-width: 480px) {
-  /* line 267, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoBody {
-    /*desktop y tablet*/
-    display: grid;
-    grid-template-columns: 5fr 6fr;
-    height: 94vh;
-  }
+/* line 267, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.contactoBody {
+  height: auto;
 }
 
-/* line 275, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-.contactoRedes {
-  padding: 8rem 4rem 0 4rem;
+/* line 271, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.bloqueContacto {
   display: flex;
-  height: 5rem;
+  flex-wrap: wrap;
+  background-color: #e6e6e6;
 }
 
-/* line 279, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 277, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.contactoRedes {
+  padding: 7rem 0 3rem 0;
+  display: flex;
+  width: 40% !important;
+  margin: auto;
+}
+
+/* line 282, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes div {
   flex-grow: 1;
-  font-size: .6rem;
 }
 
-/* line 283, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 286, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes .contactoRedesLogos {
   height: 2rem;
 }
 
-/* line 285, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 288, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoRedes .contactoRedesLogos:hover {
   height: 2.5rem;
 }
 
 @media all and (min-width: 480px) {
-  /* line 275, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 277, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoRedes {
-    /*desktop y tablet*/
-    grid-column: 2;
-    grid-row: 1;
-    padding: 8rem 12vw 0 12vw;
+    /*desktop y tablet
+ 		padding: 8rem 12vw 0 12vw;*/
   }
 }
 
-@media all and (min-width: 480px) {
-  /* line 296, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoFormularioContenedor {
-    /*desktop y tablet*/
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    background-image: url("../images/logo.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-    height: 94vh;
-    z-index: 10001;
-  }
-}
-
-@media all and (max-height: 650px) {
-  /* line 296, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoFormularioContenedor {
-    background-image: none;
-  }
-}
-
-/* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 297, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario {
+  background-color: #e6e6e6;
+  height: 95vh;
+  padding-top: 6rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   /*display: flex;
- 	flex-direction: column;*/
-  padding-right: 9vw;
-  padding-left: 9vw;
-  padding-top: 5rem;
-  height: 400px;
-  justify-content: space-between;
+ 	flex-direction: column;
+ 	justify-content: space-between; */
 }
 
-/* line 322, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 306, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario div {
   padding-top: 0.2rem;
 }
 
-/* line 325, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 309, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoMensaje {
   height: 7rem;
   width: -moz-available;
   /*no funciona en chrome*/
 }
 
-/* line 329, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 313, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoFormularioRazones {
   align-self: end;
 }
 
-/* line 332, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 316, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoFormularioBotones {
   display: flex;
   justify-content: center;
 }
 
-/* line 336, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 320, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .contactoFormulario .contactoMapIframe {
   scale: 70%;
 }
 
 @media all and (min-width: 480px) {
-  /* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 297, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoFormulario {
     /*desktop y tablet*/
     /*padding: auto !important;
 		height: auto;*/
-    padding-top: 37vh;
-    padding-right: 12vw;
-    padding-left: 12vw;
   }
 }
 
-@media all and (max-height: 650px) {
-  /* line 314, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoFormulario {
-    padding-top: auto;
-    padding-right: 10vw;
-    padding-left: 10vw;
-  }
+/* line 330, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.contactoContacto {
+  height: 10rem;
+  margin: auto;
+}
+
+/* line 333, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+.contactoContacto .contacto {
+  height: 10rem;
 }
 
 @media all and (min-width: 480px) {
-  /* line 353, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+  /* line 330, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
   .contactoContacto {
     /*desktop y tablet*/
-    grid-column: 2;
-    grid-row: 3;
-  }
-  /* line 357, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoContacto .contactoMapa {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  /* line 361, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
-  .contactoContacto .contactoMapIframe {
-    scale: 100vh;
   }
 }
 
 /* INSTALACIONES  MOBILE FIRST */
-/* line 369, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 343, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesSalasLista {
   list-style: none;
   padding: 3rem;
   font-size: 1.2rem;
 }
 
-/* line 373, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 347, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesSalasLista li {
   padding: .3rem;
 }
 
-/* line 379, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 353, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesLogoContenedor {
   height: 0.5rem !important;
 }
 
-/* line 383, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 357, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .instalacionesImgContainer {
   height: 90vh;
 }
 
 /* general estilo BEM */
-/* line 388, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 362, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .center {
   align-self: center;
   text-align: center;
   align-items: center;
 }
 
-/* line 394, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 368, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .alignRight {
   text-align: right;
   align-self: end;
 }
 
-/* line 400, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
+/* line 374, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .redfooter {
   /* FOOTER ROJO */
   background-color: red;

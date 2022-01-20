@@ -70,9 +70,6 @@ body {
 	}
 }
 
-
-
-
 /* FOOTER INDEX LOGO - BARANDA Y CONTACTO */
 #footerIndex {
 	display: grid;
@@ -265,20 +262,22 @@ body {
 /* CONTACTO HTML MOBILE FIRST */
 
 .contactoBody {
-		@media all and (min-width: 480px) { /*desktop y tablet*/
-			display: grid;
-			grid-template-columns: 5fr 6fr;
-			height: 94vh;
-		}
+	height: auto;
+}
+
+.bloqueContacto {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgb(230, 230, 230);
 }
 
 .contactoRedes {
-	padding: 8rem 4rem 0 4rem;
+	padding: 7rem 0 3rem 0;
 	display: flex;
-	height: 5rem;
+	width: 40% !important;
+	margin: auto;
 	div {
  		flex-grow: 1;
- 		font-size: .6rem;
  	}
  	.contactoRedesLogos {
  		height: 2rem;
@@ -286,39 +285,14 @@ body {
  			height: 2.5rem;
  		}
  	}
- 	@media all and (min-width: 480px) { /*desktop y tablet*/
- 		grid-column: 2 ;
-		grid-row: 1 ;
-		padding: 8rem 12vw 0 12vw;
- 	}
-}
-
-.contactoFormularioContenedor {
-		@media all and (min-width: 480px) { /*desktop y tablet*/
-			grid-column: 1 ;
-			grid-row: 1 / span 3;
-			background-image: url('../images/logo.PNG');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position-x: center;
-			background-position-y: bottom;
-			height: 94vh;
-			z-index: 10001;
-		}
-		@media all and (max-height: 650px) {
-			background-image: none;
-		}
-
 }
 
 .contactoFormulario {
- 	/*display: flex;
- 	flex-direction: column;*/
- 	padding-right: 9vw;
- 	padding-left: 9vw;
- 	padding-top: 5rem;
- 	height: 400px;
- 	justify-content: space-between;
+	background-color: rgb(230, 230, 230);
+	height: 95vh;
+	padding-top: 6rem;
+	padding-right: 3rem; 
+	padding-left: 3rem;
  	div {
 		padding-top: 0.2rem;
 	}
@@ -336,31 +310,16 @@ body {
 	.contactoMapIframe {
 		scale: 70%;
 	}
-	@media all and (min-width: 480px) { /*desktop y tablet*/
-		/*padding: auto !important;
-		height: auto;*/
-		padding-top: 37vh;
-		padding-right: 12vw;
-		padding-left: 12vw;
-	}
-	@media all and (max-height: 650px) {
-		padding-top: auto;
-		padding-right: 10vw;
-		padding-left: 10vw;
-	}
 }
 
 .contactoContacto {
+	height: 10rem;
+	margin: auto;
+	.contacto {
+		height: 10rem;
+	}
 	@media all and (min-width: 480px) { /*desktop y tablet*/
-		grid-column: 2;
-		grid-row: 3 ;
-		.contactoMapa {
-			grid-column: 2;
-			grid-row: 2;
-		}
-		.contactoMapIframe {
-			scale: 100vh;
-		}
+		
 	}
 }
 
