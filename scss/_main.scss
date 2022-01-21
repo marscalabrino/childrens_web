@@ -263,40 +263,42 @@ body {
 
 .contactoBody {
 	height: auto;
-}
-
-.bloqueContacto {
-	display: flex;
-	flex-wrap: wrap;
 	background-color: rgb(230, 230, 230);
+
 }
 
 .contactoRedes {
-	padding: 7rem 0 3rem 0;
+	padding: 2rem;
 	display: flex;
-	width: 40% !important;
 	margin: auto;
 	div {
  		flex-grow: 1;
  	}
  	.contactoRedesLogos {
- 		height: 2rem;
+ 		height: 3rem;
  		&:hover {
- 			height: 2.5rem;
+ 			height: 3.5rem;
  		}
  	}
 }
+.contactoFormularioContenedor {
+	width: 70%;
+	background-color: white;
+	padding: 2rem;
+	margin: auto;
+	border-radius: 1rem;
+	border-style: ridge;
+	border-width: 0.1rem;
+	div {
+		padding-top: 0.4rem;
+		padding-bottom: 0.4rem;
+	}
+}
 
 .contactoFormulario {
-	background-color: rgb(230, 230, 230);
 	height: 95vh;
-	padding-top: 6rem;
-	padding-right: 3rem; 
-	padding-left: 3rem;
- 	div {
-		padding-top: 0.2rem;
-	}
-	.contactoMensaje {
+	display: flex;
+ 	.contactoMensaje {
 		height: 7rem;
 		width: -moz-available;/*no funciona en chrome*/
 	}
@@ -323,12 +325,22 @@ body {
 	}
 }
 
+.mapContact {
+	height: 150px;
+}
+
 /* INSTALACIONES  MOBILE FIRST */
 
 .instalacionesSalasLista {
 	list-style: none;
-	padding: 3rem;
-	font-size: 1.2rem;
+	padding: 1rem;
+	font-size: 1rem;
+	width: 15%;
+	border-style: dashed;
+	border-radius: 2rem;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	li {
 	padding: .3rem;
 	
