@@ -4,5 +4,8 @@
 	background-position: center;
 	height: $height;
 	position: relative;
+	@media all and (max-width: 760px) { 
+		background-image: url("../images/fondo02.jpg");
+	}
 
 }

@@ -4,8 +4,6 @@
 	box-sizing: border-box;
 }
 
-/* tengo problema con la imagen de la barandilla*/
-/*solucion momentanea*/
 body {
 	overflow-x: hidden;
 }
@@ -13,38 +11,27 @@ body {
 /* --- MENU en todos los html--- */
 
 .header {
-	background-color: map-get($bgColors, white);
-	position: fixed;
-	width: 100vw;
-	z-index: 1000;
-	.menu {
-		height: 2rem;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		margin-right: 1.5rem;
+	.ajuste-navbar {
+		flex-grow: 0 !important;
+	}
+	nav {
+		background-color: $bgcolor !important;
 		a {
-			text-decoration: none;
-			color: black;
-		}
-		div {
-			margin-right: 1rem;
-			margin-left: 1rem;
+			text-align: center;
 		}
 	}
 }
 
- 
 /* CONTENIDO PRINCIPAL INDEX */
 
 .inicio{
-	height: 85vh;
+	height: 77vh;
 	.slideImagenesIndex {
 		height: 80vh;
 		margin-top: 2rem;
 	}
 	@media all and (max-width: 624px) { /* CELULARES */
-		height: 90vh;
+		height: 81vh;
 	}
 }
 
@@ -154,18 +141,24 @@ body {
 
 /* -- ACTIVIDADES MOBILE FIRST -480PX -- */
 
+.actividadesContenido {
+	@extend .noticiasContenido;
+	height: auto !important;
+}
+
+
 .actividades { /**/
 	display: grid;
 	grid-template-columns: auto auto;
 	padding-bottom: 6vh;
 	padding-top: 7vh;
-	height: 94vh;
+	height: 85vh;
 	grid-template-rows: 1fr 1fr 1fr;
 	.actividadesIlustracionesGrid {/*Suplantar por ilustraciones*/
 		height: 7vh;
 		margin: 2rem;
 		i {
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 	}
 	.actividadesTitulos {
@@ -181,9 +174,6 @@ body {
 		}
 	}
 	@media all and (min-width: 480px) { /*TABLET*/
-		/*display: grid;
-		grid-template-columns: auto auto auto;
-		padding-top: 10vh;*/
 		padding-bottom: 0;
 		display: flex;
 		flex-wrap: wrap;
@@ -205,12 +195,6 @@ body {
 	}
 		
 }
-
-.actividadesContenido {
-	@extend .noticiasContenido;
-	height: 800px !important;
-}
-
 /* NOTICIAS HTML  MOBILE FIRST */
 
 .noticiasHeader {
@@ -236,10 +220,12 @@ body {
 }
 
 .noticiasContenido {
-	@include bookBackgound (1600px);
-	padding-right: 10vw;
-	padding-left: 10vw;
+	@include bookBackgound ();
+	padding-top: 2rem;
+	padding-right: 13vw;
+	padding-left: 13vw;
 	white-space: pre-line;
+	height: auto;
 	.noticiasTitulo {
 		@extend .fontMontserrat;
 		font-size: 1.5rem;
@@ -248,12 +234,17 @@ body {
 	.noticiasArticuloContenido{
 		@extend .fontMontserrat;
 		font-size:1rem;
+		span {
+			font-weight: 900;
+		}
  	}
 	.imgNoticias {
 		display: flex;
+		flex-wrap: wrap;
 		img {
 			height: 200px;
 			margin: auto;
+			padding: .2rem;
 		}
 	}
 }
@@ -282,7 +273,8 @@ body {
  	}
 }
 .contactoFormularioContenedor {
-	width: 70%;
+	width: 85%;
+	height: 85%;
 	background-color: white;
 	padding: 2rem;
 	margin: auto;
@@ -296,7 +288,7 @@ body {
 }
 
 .contactoFormulario {
-	height: 95vh;
+	height: 85vh;
 	display: flex;
  	.contactoMensaje {
 		height: 7rem;
@@ -320,9 +312,6 @@ body {
 	.contacto {
 		height: 10rem;
 	}
-	@media all and (min-width: 480px) { /*desktop y tablet*/
-		
-	}
 }
 
 .mapContact {
@@ -330,20 +319,28 @@ body {
 }
 
 /* INSTALACIONES  MOBILE FIRST */
+.bodyInstalaciones {
+	@include bookBackgound ();
+	height: auto;
+}
 
 .instalacionesSalasLista {
 	list-style: none;
 	padding: 1rem;
 	font-size: 1rem;
-	width: 15%;
-	border-style: dashed;
-	border-radius: 2rem;
+	width: 40%;
+	//border-style: dashed;
+	//border-radius: 2rem;
 	margin: auto;
 	margin-top: 2rem;
-	margin-bottom: 2rem;
+	//margin-bottom: 2rem;
+	//height: auto;
 	li {
-	padding: .3rem;
-	
+		padding: .3rem;	
+	}
+	.tituloLista {
+		font-size: 1.3rem;
+		font-weight: 700;
 	}
 }
 
