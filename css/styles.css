@@ -326,7 +326,7 @@ body {
 
 /* line 223, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .noticiasContenido, .actividadesContenido {
-  background-image: url("../images/fondo01.PNG");
+  background-image: url("../images/fondo01.png");
   background-size: 100vw;
   background-position: center;
   height: 840px;
@@ -469,7 +469,7 @@ body {
 /* INSTALACIONES  MOBILE FIRST */
 /* line 323, ../../../OneDrive/Documents/Desarrollo/childrens_web/scss/_main.scss */
 .bodyInstalaciones {
-  background-image: url("../images/fondo01.PNG");
+  background-image: url("../images/fondo01.png");
   background-size: 100vw;
   background-position: center;
   height: 840px;

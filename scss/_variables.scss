@@ -12,7 +12,7 @@ $bgColors:(
 
 //Fondo para Instalaciones, Actividades y Noticias - Responsive
 @mixin bookBackgound($height:840px) {
-    background-image: url('../images/fondo01.PNG');
+    background-image: url('../images/fondo01.png');
 	background-size: 100vw;
 	background-position: center;
 	height: $height;
