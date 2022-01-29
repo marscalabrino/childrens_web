@@ -1,11 +1,24 @@
-/* COLORS */
+/* COLORES PRINCIPALES */
 $footers: red;
-$actividadesicons: #808080;
+$actividadesicons: #353535;
 $bgcolor: #fff;
 
-
+// Escala de grises
 $bgColors:(
     white: #fff,
     grey: #ccc,
     darkGrey: #cfc
 );
+
+//Fondo para Instalaciones, Actividades y Noticias - Responsive
+@mixin bookBackgound($height:840px) {
+    background-image: url('../images/fondo01.PNG');
+	background-size: 100vw;
+	background-position: center;
+	height: $height;
+	position: relative;
+	@media all and (max-width: 760px) { 
+		background-image: url("../images/fondo02.jpg");
+	}
+
+}
